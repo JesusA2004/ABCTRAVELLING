@@ -90,26 +90,19 @@ body::before {
   padding: 34px 20px;
 }
 
-.card-wrap {
-  width: 100%;
-  max-width: 1120px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
 .timeline {
   position: absolute;
-  left: 6px;
-  top: 140px;
-  bottom: 38px;
-  width: 40px;
-  z-index: 2;
+  top: 136px;
+  bottom: 42px;
+  left: 85px;
+  width: 22px;
+  z-index: 3;
+  pointer-events: none;
 }
 
 .timeline .line {
   position: absolute;
-  left: 17px;
+  left: 0px;
   top: 0;
   bottom: 0;
   width: 5px;
@@ -119,12 +112,12 @@ body::before {
 
 .timeline .dot {
   position: absolute;
-  left: 4px;
+  left: 0;
   width: 22px;
   height: 22px;
   border-radius: 50%;
   box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.05);
-  animation: floatDot 3s ease-in-out infinite;
+  animation: none;
 }
 
 .timeline .dot.gold {
@@ -144,6 +137,15 @@ body::before {
 .timeline .dot:nth-child(8) { animation-delay: .7s; }
 .timeline .dot:nth-child(9) { animation-delay: .8s; }
 
+.card-wrap {
+  width: 100%;
+  max-width: 1120px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+}
+
 .form-card {
   width: 100%;
   max-width: 980px;
@@ -152,16 +154,17 @@ body::before {
   box-shadow: var(--shadow);
   position: relative;
   overflow: visible;
-  padding: 30px 34px 32px 84px;
+  padding: 30px 28px 32px 64px;
   animation: fadeUp .75s ease;
   backdrop-filter: blur(4px);
+  z-index: 2;
 }
 
 .top-bar {
   position: absolute;
   top: 30px;
   left: 154px;
-  right: 0;
+  right: 24px;
   height: 44px;
   background: linear-gradient(90deg, var(--dorado), var(--dorado-2));
   border-top-right-radius: 24px;
@@ -671,9 +674,46 @@ input[type="email"]:focus {
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1180px) {
+  .timeline {
+    left: 35px;
+    top: 136px;
+    bottom: 40px;
+  }
+
   .form-card {
-    padding: 28px 28px 30px 62px;
+    padding: 28px 24px 30px 56px;
+  }
+
+  .card-content h1 {
+    font-size: 3.7rem;
+    letter-spacing: -1.8px;
+  }
+
+  .form-group {
+    grid-template-columns: 300px 1fr;
+  }
+
+  .top-bar {
+    left: 130px;
+    right: 20px;
+  }
+
+  .logo-box {
+    margin-left: -10px;
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .timeline {
+    left: 20px;
+    top: 132px;
+    bottom: 36px;
+  }
+
+  .form-card {
+    padding: 26px 24px 28px 52px;
   }
 
   .card-content h1 {
@@ -686,11 +726,58 @@ input[type="email"]:focus {
   }
 
   .top-bar {
-    left: 145px;
+    left: 95px;
   }
 
   .logo-box {
     margin-left: -12px;
+  }
+}
+
+@media (max-width: 900px) {
+  .timeline {
+    display: none;
+  }
+
+  .form-card {
+    padding: 24px 20px 26px 20px;
+  }
+
+  .top-bar {
+    left: 110px;
+    right: 18px;
+    height: 34px;
+  }
+
+  .logo-box {
+    width: 118px;
+    height: 96px;
+    margin-left: 0;
+    margin-bottom: 14px;
+  }
+
+  .card-content h1 {
+    font-size: 2.9rem;
+    line-height: 0.95;
+    letter-spacing: -1.2px;
+    max-width: 100%;
+    word-break: break-word;
+  }
+
+  .subtitle {
+    max-width: 100%;
+    font-size: 0.9rem;
+    line-height: 1.35;
+  }
+
+  .form-group {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .form-group > label {
+    padding-top: 0;
+    font-size: 0.93rem;
   }
 }
 
@@ -726,9 +813,13 @@ input[type="email"]:focus {
   }
 
   .card-content h1 {
-    font-size: 2.45rem;
-    line-height: 0.94;
-    letter-spacing: -1px;
+    font-size: clamp(2.4rem, 6vw, 4.25rem);
+    line-height: 0.92;
+    font-weight: 800;
+    letter-spacing: -2px;
+    color: var(--azul);
+    margin-bottom: 10px;
+    text-transform: uppercase;
   }
 
   .subtitle {
