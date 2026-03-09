@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>ABC Travelling | Registro</title>
+
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+
+  <link rel="stylesheet" href="assets/css/registro.css" />
+</head>
+<body>
+  <main class="registro-page">
+    <section class="registro-shell">
+      <aside class="side-dots" aria-hidden="true">
+        <span class="dot gold"></span>
+        <span class="dot navy"></span>
+        <span class="dot gold"></span>
+        <span class="dot navy"></span>
+        <span class="dot gold"></span>
+        <span class="dot navy"></span>
+        <span class="dot gold"></span>
+      </aside>
+
+      <div class="registro-card">
+        <div class="registro-topbar"></div>
+
+        <div class="registro-logo">
+          <img src="assets/images/logoFormulario.png" alt="ABC Travelling" />
+        </div>
+
+        <div class="registro-head">
+          <span class="eyebrow">ABC Travelling</span>
+          <h1>Formulario de registro</h1>
+          <p>
+            Completa el formulario con información oficial y vigente.
+            <strong>Los campos marcados con * son obligatorios.</strong>
+          </p>
+        </div>
+
+        <form id="registroForm" class="registro-form" enctype="multipart/form-data" novalidate>
+          <div class="form-grid">
+            <div class="field">
+              <label for="correo_principal">Correo principal *</label>
+              <input type="email" id="correo_principal" name="correo_principal" placeholder="correo@empresa.com" />
+              <small class="error-text"></small>
+            </div>
+
+            <div class="field">
+              <label for="nombre_comercial">Nombre comercial / Business name *</label>
+              <input type="text" id="nombre_comercial" name="nombre_comercial" placeholder="Nombre de tu empresa" />
+              <small class="error-text"></small>
+            </div>
+
+            <div class="field field-full">
+              <label for="logotipo_empresa">Logotipo de empresa</label>
+
+              <div class="upload-area" id="uploadArea">
+                <input
+                  type="file"
+                  id="logotipo_empresa"
+                  name="logotipo_empresa"
+                  accept=".png,.jpg,.jpeg,.webp,.svg,.pdf"
+                />
+
+                <label for="logotipo_empresa" class="upload-label" id="uploadLabel">
+                  <div class="upload-left">
+                    <span class="upload-icon">↑</span>
+                    <div class="upload-copy">
+                      <strong>Sube tu archivo</strong>
+                      <span>PNG, JPG, JPEG, WEBP, SVG o PDF · Máx 8MB</span>
+                    </div>
+                  </div>
+                  <span class="upload-action">Seleccionar archivo</span>
+                </label>
+
+                <div class="file-preview" id="filePreview" hidden>
+                  <div class="file-preview-thumb" id="filePreviewThumb"></div>
+                  <div class="file-preview-data">
+                    <strong id="filePreviewName"></strong>
+                    <span id="filePreviewType"></span>
+                  </div>
+                  <button type="button" class="file-remove" id="removeFileBtn" aria-label="Quitar archivo">×</button>
+                </div>
+              </div>
+
+              <small class="error-text"></small>
+            </div>
+
+            <div class="field">
+              <label for="owner_name">Nombre del dueño o gerente</label>
+              <input type="text" id="owner_name" name="owner_name" placeholder="Nombre del responsable" />
+              <small class="error-text"></small>
+            </div>
+
+            <div class="field">
+              <label for="correo_empresa">Correo empresarial</label>
+              <input type="email" id="correo_empresa" name="correo_empresa" placeholder="ventas@empresa.com" />
+              <small class="error-text"></small>
+            </div>
+
+            <div class="field">
+              <label for="telefono">Teléfono / Phone *</label>
+              <input type="text" id="telefono" name="telefono" placeholder="+52 777 123 4567" />
+              <small class="error-text"></small>
+            </div>
+
+            <div class="field">
+              <label for="mercados">Mercados operados</label>
+              <input type="text" id="mercados" name="mercados" placeholder="México, USA, LATAM..." />
+              <small class="error-text"></small>
+            </div>
+
+            <div class="field field-full">
+              <label>Modelo de negocio</label>
+              <div class="choice-row">
+                <label class="choice-pill">
+                  <input type="checkbox" name="modelo_negocio[]" value="B2C" />
+                  <span>B2C</span>
+                </label>
+                <label class="choice-pill">
+                  <input type="checkbox" name="modelo_negocio[]" value="B2B" />
+                  <span>B2B</span>
+                </label>
+                <label class="choice-pill">
+                  <input type="checkbox" name="modelo_negocio[]" value="B2C2B" />
+                  <span>B2C2B</span>
+                </label>
+              </div>
+              <small class="error-text"></small>
+            </div>
+
+            <div class="field field-full">
+              <label for="usuario_principal_nombre">Nombre y apellido del usuario principal</label>
+              <input type="text" id="usuario_principal_nombre" name="usuario_principal_nombre" placeholder="Nombre completo" />
+              <small class="error-text"></small>
+            </div>
+
+            <div class="field">
+              <label for="usuario_principal_correo">Correo del usuario principal</label>
+              <input type="email" id="usuario_principal_correo" name="usuario_principal_correo" placeholder="usuario@empresa.com" />
+              <small class="error-text"></small>
+            </div>
+
+            <div class="field">
+              <label for="usuario_principal_telefono">Teléfono del usuario principal</label>
+              <input type="text" id="usuario_principal_telefono" name="usuario_principal_telefono" placeholder="+52 777 123 4567" />
+              <small class="error-text"></small>
+            </div>
+
+            <div class="field field-full">
+              <label>¿Desea recibir promociones y ofertas por correo? *</label>
+              <div class="choice-row">
+                <label class="choice-pill radio-pill">
+                  <input type="radio" name="promociones" value="Sí" />
+                  <span>Sí</span>
+                </label>
+                <label class="choice-pill radio-pill">
+                  <input type="radio" name="promociones" value="No" />
+                  <span>No</span>
+                </label>
+              </div>
+              <small class="error-text"></small>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-submit" id="submitBtn">
+              <span class="btn-text">Enviar registro</span>
+              <span class="btn-loader" aria-hidden="true"></span>
+            </button>
+          </div>
+
+          <div class="form-status" id="formStatus"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/registro.js"></script>
+</body>
+</html>
