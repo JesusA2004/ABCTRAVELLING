@@ -2,155 +2,254 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v6.1.12, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ABC Travelling - Registro</title>
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon"/>
+  <meta name="description" content="">
+  <title>Registro - ABC Travelling</title>
 
-  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
-  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/registro.css?v=15" />
 
-  <link rel="stylesheet" href="assets/css/registro.css" />
+  <link rel="icon" type="image/x-icon" href="assets/public/favicon.ico" />
+  <link rel="icon" type="image/png" href="assets/public/favicon.png" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: "#1c2636",
+            navy2: "#243248",
+            gold: "#8c7547",
+            gold2: "#a68d57",
+            soft: "#f4f5f7",
+            soft2: "#eceef1"
+          },
+          fontFamily: {
+            outfit: ["Outfit", "Arial", "sans-serif"]
+          },
+          boxShadow: {
+            softxl: "0 20px 55px rgba(0,0,0,0.18)",
+            softcard: "0 12px 28px rgba(28,38,54,0.10)"
+          },
+          borderRadius: {
+            "4xl": "2rem"
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-  <main class="page">
-    <section class="card-wrap">
+<body class="font-outfit text-navy min-h-screen bg-cover bg-center bg-no-repeat relative overflow-x-hidden">
+  <div class="page-overlay"></div>
 
-      <div class="timeline" aria-hidden="true">
-        <div class="line"></div>
-
-        <span class="dot gold" style="top: 7%;"></span>
-        <span class="dot gold" style="top: 15%;"></span>
-        <span class="dot navy" style="top: 23%;"></span>
-        <span class="dot gold" style="top: 33%;"></span>
-        <span class="dot navy" style="top: 43%;"></span>
-        <span class="dot gold" style="top: 56%;"></span>
-        <span class="dot navy" style="top: 69%;"></span>
-        <span class="dot gold" style="top: 82%;"></span>
-        <span class="dot navy" style="top: 92%;"></span>
+  <main class="relative z-10 min-h-screen px-3 py-4 sm:px-4 sm:py-6 lg:px-6 lg:py-8">
+    <section class="mx-auto w-full max-w-[1180px] relative">
+      <!-- Timeline desktop -->
+      <div class="timeline hidden xl:block" aria-hidden="true">
+        <div class="timeline-line"></div>
+        <span class="timeline-dot gold" style="top: 7%;"></span>
+        <span class="timeline-dot gold" style="top: 15%;"></span>
+        <span class="timeline-dot navy" style="top: 23%;"></span>
+        <span class="timeline-dot gold" style="top: 33%;"></span>
+        <span class="timeline-dot navy" style="top: 43%;"></span>
+        <span class="timeline-dot gold" style="top: 56%;"></span>
+        <span class="timeline-dot navy" style="top: 69%;"></span>
+        <span class="timeline-dot gold" style="top: 82%;"></span>
+        <span class="timeline-dot navy" style="top: 92%;"></span>
       </div>
 
-      <div class="form-card">
-        <div class="top-bar"></div>
+      <div class="relative overflow-hidden rounded-[28px] bg-white/95 shadow-softxl backdrop-blur-sm">
+        <!-- top gold bar -->
+        <div class="absolute left-[94px] right-3 top-4 h-8 rounded-r-3xl rounded-bl-2xl bg-gradient-to-r from-gold to-gold2 sm:left-[108px] sm:right-4 sm:top-5 sm:h-9 lg:left-[145px] lg:right-6 lg:top-6 lg:h-11"></div>
 
-        <div class="logo-box">
-          <img src="assets/images/logoFormulario.png" alt="ABC Travelling Logo" />
+        <!-- top controls -->
+        <div class="absolute right-3 top-3 z-20 sm:right-4 sm:top-4 lg:right-6 lg:top-5">
+          <button
+            type="button"
+            id="langToggle"
+            class="lang-toggle relative inline-flex h-11 w-[106px] items-center rounded-full border border-slate-200 bg-white/90 p-1 shadow-softcard backdrop-blur-md transition-all duration-300"
+            aria-label="Cambiar idioma"
+            data-lang="es"
+          >
+            <span id="langThumb" class="lang-thumb absolute left-1 top-1 h-9 w-[48px] rounded-full bg-gradient-to-r from-navy to-navy2 shadow-md transition-all duration-300"></span>
+            <span class="relative z-10 flex w-full items-center justify-between px-3 text-sm font-extrabold">
+              <span id="langEsText" class="lang-text-active">ES</span>
+              <span id="langEnText" class="lang-text-inactive">EN</span>
+            </span>
+          </button>
         </div>
 
-        <div class="card-content">
-          <h1>FORMULARIO<br>DE REGISTRO</h1>
+        <div class="relative z-10 px-4 pb-7 pt-4 sm:px-5 sm:pb-8 sm:pt-5 lg:px-8 lg:pb-10 lg:pt-6 xl:px-10">
+          <!-- logo -->
+          <div class="mb-4 h-[98px] w-[108px] rounded-[24px] bg-gradient-to-b from-navy2 to-navy p-3 shadow-softcard sm:h-[108px] sm:w-[118px] lg:mb-5 lg:h-[128px] lg:w-[150px] lg:rounded-[26px] lg:-ml-2 float-gentle">
+            <img src="assets/images/logoFormulario.png" alt="ABC Travelling Logo" class="h-full w-full object-contain" />
+          </div>
 
-          <p class="subtitle">
-            Debe completar todo el formulario con la información original tal y como se encuentra reflejada
-            en los documentos de identidad oficiales. <strong>Los campos con * son obligatorios</strong>
-          </p>
+          <!-- hero -->
+          <div class="mb-5 lg:mb-6">
+            <div class="min-w-0">
+              <h1 id="pageTitle" class="max-w-[760px] text-[3rem] font-extrabold uppercase leading-[0.92] tracking-[-0.04em] text-navy sm:text-[3.6rem] md:text-[4rem] lg:text-[4.6rem]">
+                FORMULARIO<br>DE REGISTRO
+              </h1>
 
-          <form id="registroForm" class="registro-form" novalidate enctype="multipart/form-data">
-            <div class="form-group">
-              <label for="correo_principal">Correo*</label>
+              <p class="mt-3 max-w-[760px] text-[0.95rem] leading-[1.35] text-slate-700 sm:text-[1rem]">
+                <span id="subtitleText">
+                  Debe completar todo el formulario con la información original tal y como se encuentra reflejada en los documentos oficiales.
+                </span>
+                <strong id="subtitleStrong" class="font-extrabold text-navy"> Todos los campos son obligatorios.</strong>
+              </p>
+            </div>
+          </div>
+
+          <!-- form -->
+          <form id="registroForm" novalidate enctype="multipart/form-data" class="space-y-4 lg:space-y-5">
+            <!-- row -->
+            <div class="grid grid-cols-1 gap-3 lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-5">
+              <div class="label-wrap">
+                <label for="correo_principal" id="label_correo_principal" class="field-label">Correo*</label>
+                <button type="button" class="help-btn" data-help="correo_principal">?</button>
+                <div class="help-popover" data-help-box="correo_principal" hidden></div>
+              </div>
               <div class="field-wrap">
-                <input type="email" id="correo_principal" name="correo_principal" />
+                <input type="email" id="correo_principal" name="correo_principal" class="field-input" />
                 <small class="error-text"></small>
               </div>
             </div>
 
-            <div class="form-group">
-              <label for="nombre_comercial">Nombre Comercial / Business name*</label>
+            <div class="grid grid-cols-1 gap-3 lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-5">
+              <div class="label-wrap">
+                <label for="nombre_comercial" id="label_nombre_comercial" class="field-label">Nombre comercial*</label>
+                <button type="button" class="help-btn" data-help="nombre_comercial">?</button>
+                <div class="help-popover" data-help-box="nombre_comercial" hidden></div>
+              </div>
               <div class="field-wrap">
-                <input type="text" id="nombre_comercial" name="nombre_comercial" />
+                <input type="text" id="nombre_comercial" name="nombre_comercial" class="field-input" />
                 <small class="error-text"></small>
               </div>
             </div>
 
-            <div class="form-group upload-row">
-              <label for="logotipo_empresa">Logotipo de Empresa</label>
+            <div class="grid grid-cols-1 gap-3 lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-5">
+              <div class="label-wrap">
+                <label for="logotipo_empresa" id="label_logotipo_empresa" class="field-label">Logotipo de empresa*</label>
+                <button type="button" class="help-btn" data-help="logotipo_empresa">?</button>
+                <div class="help-popover" data-help-box="logotipo_empresa" hidden></div>
+              </div>
+
               <div class="field-wrap">
-                <div class="upload-box" id="uploadBox">
+                <div class="relative">
                   <input
                     type="file"
                     id="logotipo_empresa"
                     name="logotipo_empresa"
                     accept=".png,.jpg,.jpeg,.webp,.svg,.pdf"
+                    class="absolute inset-0 opacity-0 pointer-events-none"
                   />
 
-                  <label for="logotipo_empresa" class="upload-label" id="uploadLabel">
-                    <span class="upload-icon">↑</span>
-
-                    <span class="upload-text">
-                      <strong>Subir archivo</strong>
-                      <span>PNG, JPG, WEBP, SVG o PDF</span>
+                  <label for="logotipo_empresa" id="uploadLabel" class="upload-label-tailwind">
+                    <span class="flex items-center gap-3 min-w-0">
+                      <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-navy to-navy2 text-white font-extrabold shadow-md">↑</span>
+                      <span class="min-w-0 flex flex-col">
+                        <strong id="uploadTitle" class="text-[0.96rem] font-extrabold leading-tight text-navy">Subir archivo</strong>
+                        <span id="uploadSubtitle" class="text-[0.8rem] leading-tight text-slate-500">PNG, JPG, WEBP, SVG o PDF</span>
+                      </span>
                     </span>
 
-                    <span class="upload-btn">Seleccionar</span>
+                    <span id="uploadButton" class="upload-button-tailwind">Seleccionar</span>
                   </label>
                 </div>
 
-                <div class="file-preview" id="filePreview" hidden>
-                  <div class="file-preview-inner">
-                    <div class="preview-thumb" id="previewThumb"></div>
+                <div id="filePreview" class="hidden">
+                  <div class="mt-2 flex items-center gap-3 rounded-2xl border border-slate-200 bg-slate-50 px-3 py-3 shadow-softcard">
+                    <div id="previewThumb" class="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-slate-200"></div>
 
-                    <div class="preview-meta">
-                      <strong id="previewName"></strong>
-                      <span id="previewType"></span>
+                    <div class="min-w-0 flex-1">
+                      <strong id="previewName" class="block truncate text-sm font-extrabold text-navy"></strong>
+                      <span id="previewType" class="block text-xs text-slate-500"></span>
                     </div>
 
-                    <button type="button" class="remove-file-btn" id="removeFileBtn" aria-label="Quitar archivo">
+                    <button type="button" id="removeFileBtn" class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-200 text-xl text-navy transition hover:rotate-90 hover:bg-red-100 hover:text-red-600">
                       ×
                     </button>
                   </div>
                 </div>
 
-                <small class="file-name" id="fileName">Ningún archivo seleccionado</small>
+                <small id="fileName" class="text-[0.84rem] text-slate-500">Ningún archivo seleccionado</small>
                 <small class="error-text"></small>
               </div>
             </div>
 
-            <div class="form-group">
-              <label for="owner_name">Nombre Dueño o Gerente / Owner Name</label>
+            <div class="grid grid-cols-1 gap-3 lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-5">
+              <div class="label-wrap">
+                <label for="owner_name" id="label_owner_name" class="field-label">Nombre del dueño o gerente*</label>
+                <button type="button" class="help-btn" data-help="owner_name">?</button>
+                <div class="help-popover" data-help-box="owner_name" hidden></div>
+              </div>
               <div class="field-wrap">
-                <input type="text" id="owner_name" name="owner_name" />
+                <input type="text" id="owner_name" name="owner_name" class="field-input" />
                 <small class="error-text"></small>
               </div>
             </div>
 
-            <div class="form-group">
-              <label for="correo_empresa">Correo / Email</label>
+            <div class="grid grid-cols-1 gap-3 lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-5">
+              <div class="label-wrap">
+                <label for="correo_contacto" id="label_correo_contacto" class="field-label">Correo de contacto*</label>
+                <button type="button" class="help-btn" data-help="correo_contacto">?</button>
+                <div class="help-popover" data-help-box="correo_contacto" hidden></div>
+              </div>
               <div class="field-wrap">
-                <input type="email" id="correo_empresa" name="correo_empresa" />
+                <input type="email" id="correo_contacto" name="correo_contacto" class="field-input" />
                 <small class="error-text"></small>
               </div>
             </div>
 
-            <div class="form-group">
-              <label for="telefono">Teléfono/Phone*</label>
+            <div class="grid grid-cols-1 gap-3 lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-5">
+              <div class="label-wrap">
+                <label for="telefono" id="label_telefono" class="field-label">Teléfono*</label>
+                <button type="button" class="help-btn" data-help="telefono">?</button>
+                <div class="help-popover" data-help-box="telefono" hidden></div>
+              </div>
               <div class="field-wrap">
-                <input type="text" id="telefono" name="telefono" />
+                <input type="text" id="telefono" name="telefono" class="field-input" />
                 <small class="error-text"></small>
               </div>
             </div>
 
-            <div class="form-group">
-              <label for="mercados">Mercados operados / Operated markets</label>
+            <div class="grid grid-cols-1 gap-3 lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-5">
+              <div class="label-wrap">
+                <label for="mercados" id="label_mercados" class="field-label">Mercados operados*</label>
+                <button type="button" class="help-btn" data-help="mercados">?</button>
+                <div class="help-popover" data-help-box="mercados" hidden></div>
+              </div>
               <div class="field-wrap">
-                <input type="text" id="mercados" name="mercados" />
+                <input type="text" id="mercados" name="mercados" class="field-input" />
                 <small class="error-text"></small>
               </div>
             </div>
 
-            <div class="form-group business-model-row">
-              <label>Modelo de Negocio / Business Model</label>
+            <div class="grid grid-cols-1 gap-3 lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-5">
+              <div class="label-wrap">
+                <label id="label_modelo_negocio" class="field-label">Modelo de negocio*</label>
+                <button type="button" class="help-btn" data-help="modelo_negocio">?</button>
+                <div class="help-popover" data-help-box="modelo_negocio" hidden></div>
+              </div>
               <div class="field-wrap">
-                <div class="checkbox-row">
-                  <label class="check-item">
-                    <input type="checkbox" name="modelo_negocio[]" value="B2C" />
+                <div class="flex flex-wrap items-center gap-5 pt-1">
+                  <label class="choice-item">
+                    <input type="checkbox" name="modelo_negocio[]" value="B2C" class="choice-check" />
                     <span>B2C</span>
                   </label>
 
-                  <label class="check-item">
-                    <input type="checkbox" name="modelo_negocio[]" value="B2B" />
+                  <label class="choice-item">
+                    <input type="checkbox" name="modelo_negocio[]" value="B2B" class="choice-check" />
                     <span>B2B</span>
                   </label>
 
-                  <label class="check-item">
-                    <input type="checkbox" name="modelo_negocio[]" value="B2C2B" />
+                  <label class="choice-item">
+                    <input type="checkbox" name="modelo_negocio[]" value="B2C2B" class="choice-check" />
                     <span>B2C2B</span>
                   </label>
                 </div>
@@ -158,68 +257,78 @@
               </div>
             </div>
 
-            <div class="form-group full">
-              <label for="usuario_principal_nombre">
-                Nombre y Apellido - Usuario Principal / First and Last Name - Main User
-              </label>
+            <div class="grid grid-cols-1 gap-3">
+              <div class="label-wrap">
+                <label for="usuario_principal_nombre" id="label_usuario_principal_nombre" class="field-label">Nombre y apellido del usuario principal*</label>
+                <button type="button" class="help-btn" data-help="usuario_principal_nombre">?</button>
+                <div class="help-popover" data-help-box="usuario_principal_nombre" hidden></div>
+              </div>
               <div class="field-wrap">
-                <input type="text" id="usuario_principal_nombre" name="usuario_principal_nombre" />
+                <input type="text" id="usuario_principal_nombre" name="usuario_principal_nombre" class="field-input" />
                 <small class="error-text"></small>
               </div>
             </div>
 
-            <div class="form-group full">
-              <label for="usuario_principal_correo">
-                Correo - Usuario Principal / Email - Primary User
-              </label>
+            <div class="grid grid-cols-1 gap-3">
+              <div class="label-wrap">
+                <label for="usuario_principal_correo" id="label_usuario_principal_correo" class="field-label">Correo del usuario principal*</label>
+                <button type="button" class="help-btn" data-help="usuario_principal_correo">?</button>
+                <div class="help-popover" data-help-box="usuario_principal_correo" hidden></div>
+              </div>
               <div class="field-wrap">
-                <input type="email" id="usuario_principal_correo" name="usuario_principal_correo" />
+                <input type="email" id="usuario_principal_correo" name="usuario_principal_correo" class="field-input" />
                 <small class="error-text"></small>
               </div>
             </div>
 
-            <div class="form-group full">
-              <label for="usuario_principal_telefono">
-                Teléfono - Usuario Principal / Phone - Primary User
-              </label>
+            <div class="grid grid-cols-1 gap-3">
+              <div class="label-wrap">
+                <label for="usuario_principal_telefono" id="label_usuario_principal_telefono" class="field-label">Teléfono del usuario principal*</label>
+                <button type="button" class="help-btn" data-help="usuario_principal_telefono">?</button>
+                <div class="help-popover" data-help-box="usuario_principal_telefono" hidden></div>
+              </div>
               <div class="field-wrap">
-                <input type="text" id="usuario_principal_telefono" name="usuario_principal_telefono" />
+                <input type="text" id="usuario_principal_telefono" name="usuario_principal_telefono" class="field-input" />
                 <small class="error-text"></small>
               </div>
             </div>
 
-            <div class="form-group full">
-              <label>¿Desea recibir promociones y ofertas vía correo electrónico?*</label>
+            <div class="grid grid-cols-1 gap-3">
+              <div class="label-wrap">
+                <label id="label_promociones" class="field-label">¿Desea recibir promociones y ofertas vía correo electrónico?*</label>
+                <button type="button" class="help-btn" data-help="promociones">?</button>
+                <div class="help-popover" data-help-box="promociones" hidden></div>
+              </div>
               <div class="field-wrap">
-                <div class="checkbox-row promo-row">
-                  <label class="check-item">
-                    <input type="radio" name="promociones" value="si" />
-                    <span>SI</span>
+                <div class="flex flex-wrap items-center gap-5 pt-1">
+                  <label class="choice-item">
+                    <input type="radio" name="promociones" value="si" class="choice-check rounded-full" />
+                    <span id="radio_yes">Sí</span>
                   </label>
 
-                  <label class="check-item">
-                    <input type="radio" name="promociones" value="no" />
-                    <span>NO</span>
+                  <label class="choice-item">
+                    <input type="radio" name="promociones" value="no" class="choice-check rounded-full" />
+                    <span id="radio_no">No</span>
                   </label>
                 </div>
                 <small class="error-text"></small>
               </div>
             </div>
 
-            <div class="submit-wrap">
-              <button type="submit" class="btn-submit" id="submitBtn">
-                <span class="btn-text">ENVIAR</span>
-                <span class="btn-loader" aria-hidden="true"></span>
+            <div class="pt-2">
+              <button type="submit" id="submitBtn" class="inline-flex min-w-[180px] items-center justify-center gap-3 rounded-full bg-gradient-to-r from-navy to-navy2 px-8 py-4 text-sm font-extrabold tracking-[0.06em] text-white shadow-lg transition duration-300 hover:-translate-y-0.5 hover:shadow-xl w-full sm:w-auto">
+                <span id="submitText">ENVIAR</span>
+                <span class="btn-loader hidden h-4 w-4 rounded-full border-2 border-white/30 border-t-white"></span>
               </button>
-            </div>
 
-            <div class="form-status" id="formStatus"></div>
+              <div id="formStatus" class="mt-3 min-h-[24px] text-sm font-bold"></div>
+            </div>
           </form>
         </div>
       </div>
     </section>
   </main>
 
-  <script src="assets/js/registro.js"></script>
+  <script src="assets/js/registro.js?v=15"></script>
 </body>
 </html>
